@@ -1,0 +1,8 @@
+name: Test
+environment: test
+description: >
+  Test / staging. Should look like production for security controls; reliability and cost findings are softer.
+gate:
+  failOn: [critical]
+  warnOn: [high]
+overrides: {}

@@ -1,0 +1,38 @@
+# Google Cloud Inspector configuration
+
+environment:
+  # Project labels read (in this order) to decide the environment tier.
+  labelKeys: [environment, env, stage]
+  # Label values that map to a tier (poc / test / prod are always recognised).
+  aliases:
+    sandbox: poc
+    dev: poc
+    development: poc
+    demo: poc
+    qa: test
+    uat: test
+    staging: test
+    stage: test
+    preprod: test
+    production: prod
+    prd: prod
+    live: prod
+  # Optional: parent folder id -> tier, for projects without labels.
+  folders: {}
+  #  "123456789012": prod
+  # Used when no label or folder mapping matches. prod = strict by default.
+  default: prod
+
+compute:
+  # Image projects considered approved. Empty list = check is not applicable.
+  approvedImageProjects:
+    - debian-cloud
+    - ubuntu-os-cloud
+    - ubuntu-os-pro-cloud
+    - rhel-cloud
+    - rocky-linux-cloud
+    - cos-cloud
+    - windows-cloud
+
+iam:
+  serviceAccountKeyMaxAgeDays: 90

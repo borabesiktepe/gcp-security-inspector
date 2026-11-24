@@ -1,0 +1,11 @@
+# Accepted risks. Each entry needs a reason, an owner and an expiry date.
+# After the expiry date the finding is reported again.
+#
+# exceptions:
+#   - check: compute.vm.public-ip
+#     project: my-prod-project      # optional, glob, default "*"
+#     resource: "europe-west1-b/bastion-*"
+#     reason: Bastion host behind Cloud Armor, replaced by IAP in Q1
+#     owner: platform-team@example.com
+#     expires: 2027-03-31
+exceptions: []

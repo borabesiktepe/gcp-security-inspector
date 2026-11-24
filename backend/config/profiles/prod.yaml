@@ -1,0 +1,8 @@
+name: Production
+environment: prod
+description: >
+  Production. Strict review: any critical finding blocks, high findings must be fixed or have an approved exception.
+gate:
+  failOn: [critical]
+  warnOn: [high]
+overrides: {}

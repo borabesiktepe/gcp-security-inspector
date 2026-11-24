@@ -1,0 +1,10 @@
+name: POC
+environment: poc
+description: >
+  Proof of concept / sandbox. Only issues that expose data or the project to the internet block.
+  Hardening and reliability findings are informational or switched off.
+gate:
+  failOn: [critical]
+  warnOn: []
+# checkId: severity  (critical | high | medium | low | info | off)
+overrides: {}
